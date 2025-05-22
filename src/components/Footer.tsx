@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               <li className="text-gray-300">
                 12 Innovation Drive, Lagos, Nigeria
               </li>
-              <li className="text-gray-300">contact@unicornfoundation.org</li>
+              <li className="text-gray-300">contact@unicorn.ng</li>
               <li className="text-gray-300">+234 (0) 700 UNICORN</li>
             </ul>
           </div>
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
-          <p>© {currentYear} Unicorn Foundation. All rights reserved.</p>
+          <p>© {currentYear} Unicorn by Uspace. All rights reserved.</p>
           <p className="mt-1 flex items-center justify-center">
             powered by Umobiletechnologies
           </p>

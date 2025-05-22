@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Target, Heart, Scale } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Target, Heart, Scale } from "lucide-react";
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -17,18 +17,21 @@ const About: React.FC = () => {
   const valueItems = [
     {
       icon: <Target className="w-12 h-12 text-primary-800" />,
-      title: 'Empowerment',
-      description: 'We believe in equipping entrepreneurs with the tools, resources, and connections they need to succeed.',
+      title: "Empowerment",
+      description:
+        "We believe in equipping entrepreneurs with the tools, resources, and connections they need to succeed.",
     },
     {
       icon: <Heart className="w-12 h-12 text-primary-800" />,
-      title: 'Innovation',
-      description: 'We foster creative thinking and novel approaches to solving Africa\'s most pressing challenges.',
+      title: "Innovation",
+      description:
+        "We foster creative thinking and novel approaches to solving Africa's most pressing challenges.",
     },
     {
       icon: <Scale className="w-12 h-12 text-primary-800" />,
-      title: 'Transparency',
-      description: 'We maintain open communication and accountability in all our programs and initiatives.',
+      title: "Transparency",
+      description:
+        "We maintain open communication and accountability in all our programs and initiatives.",
     },
   ];
 
@@ -42,7 +45,9 @@ const About: React.FC = () => {
           variants={fadeIn}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">About The Unicorn Foundation</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">
+            About Unicorn by Uspace
+          </h2>
           <div className="w-20 h-1 bg-accent-500 mx-auto mb-8"></div>
         </motion.div>
 
@@ -53,15 +58,23 @@ const About: React.FC = () => {
             variants={fadeIn}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Vision & Mission</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              Our Vision & Mission
+            </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              The Unicorn Foundation is dedicated to transforming the entrepreneurial landscape across Africa by identifying, supporting, and elevating the next generation of business leaders.
+              Unicorn by Uspace is dedicated to transforming the entrepreneurial
+              landscape across Africa by identifying, supporting, and elevating
+              the next generation of business leaders.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
-              Our mission is to provide comprehensive support through funding, expert mentorship, and national visibility to help innovative African startups scale and succeed.
+              Our mission is to provide comprehensive support through funding,
+              expert mentorship, and national visibility to help innovative
+              African startups scale and succeed.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We envision an Africa where entrepreneurial talent is fully recognized, developed, and celebrated – creating economic opportunities and solving critical challenges.
+              We envision an Africa where entrepreneurial talent is fully
+              recognized, developed, and celebrated – creating economic
+              opportunities and solving critical challenges.
             </p>
           </motion.div>
 
@@ -72,8 +85,8 @@ const About: React.FC = () => {
             variants={fadeIn}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <img 
-              src="https://images.pexels.com/photos/8867431/pexels-photo-8867431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            <img
+              src="https://images.pexels.com/photos/8867431/pexels-photo-8867431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="African entrepreneurs in a workshop"
               className="w-full h-full object-cover"
             />
@@ -81,7 +94,7 @@ const About: React.FC = () => {
           </motion.div>
         </div>
 
-        <motion.h3 
+        <motion.h3
           className="text-2xl font-semibold text-gray-800 mb-8 text-center"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -101,10 +114,10 @@ const About: React.FC = () => {
               variants={fadeIn}
               transition={{ duration: 0.5, delay: 0.8 + index * 0.2 }}
             >
-              <div className="flex justify-center mb-4">
-                {item.icon}
-              </div>
-              <h4 className="text-xl font-semibold text-primary-800 mb-3 text-center">{item.title}</h4>
+              <div className="flex justify-center mb-4">{item.icon}</div>
+              <h4 className="text-xl font-semibold text-primary-800 mb-3 text-center">
+                {item.title}
+              </h4>
               <p className="text-gray-700 text-center">{item.description}</p>
             </motion.div>
           ))}
@@ -117,9 +130,15 @@ const About: React.FC = () => {
           variants={fadeIn}
           transition={{ duration: 0.5, delay: 1.4 }}
         >
-          <h3 className="text-xl font-semibold text-primary-800 mb-3">Our 23-Week Accelerator Program</h3>
+          <h3 className="text-xl font-semibold text-primary-800 mb-3">
+            Our 23-Week Accelerator Program
+          </h3>
           <p className="text-gray-700 leading-relaxed">
-            Our comprehensive 23-week program is carefully structured to nurture entrepreneurs through every stage of their journey. From initial concept refinement to final execution, we provide the guidance, resources, and connections needed to transform promising ideas into sustainable businesses.
+            Our comprehensive 23-week program is carefully structured to nurture
+            entrepreneurs through every stage of their journey. From initial
+            concept refinement to final execution, we provide the guidance,
+            resources, and connections needed to transform promising ideas into
+            sustainable businesses.
           </p>
         </motion.div>
       </div>
