@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Target, Heart, Scale } from "lucide-react";
+import image from "../assets/image.jpg";
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -86,7 +87,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <img
-              src="https://images.pexels.com/photos/8867431/pexels-photo-8867431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={image}
               alt="African entrepreneurs in a workshop"
               className="w-full h-full object-cover"
             />
