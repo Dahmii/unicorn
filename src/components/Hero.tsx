@@ -52,12 +52,12 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.7 }}
           >
-            <a
+            {/* <a
               href="#apply"
               className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-md font-semibold text-lg transition-colors duration-300 shadow-lg"
             >
               Apply Now
-            </a>
+            </a> */}
             <a
               href="#about"
               className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-3 rounded-md font-semibold text-lg transition-all duration-300 backdrop-filter backdrop-blur-sm"
