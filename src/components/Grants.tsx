@@ -131,14 +131,14 @@ const Grants: React.FC = () => {
               support and opportunities.
             </p>
 
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <a
                 href="#apply"
                 className="inline-block bg-primary-800 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-colors duration-300"
               >
                 Apply for Funding
               </a>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </div>

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Lightbulb, Rocket, Award } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Lightbulb, Rocket, Award } from "lucide-react";
 
 const Timeline: React.FC = () => {
   const [ref, inView] = useInView({
@@ -17,43 +17,46 @@ const Timeline: React.FC = () => {
   const timelineStages = [
     {
       icon: <Lightbulb size={28} className="text-white" />,
-      title: 'Setup',
-      weeks: 'Weeks 1-7',
-      color: 'bg-primary-600',
-      description: 'During this phase, entrepreneurs will refine their business ideas, establish solid foundations, and prepare comprehensive business plans.',
+      title: "Setup",
+      weeks: "Weeks 1-7",
+      color: "bg-primary-600",
+      description:
+        "During this phase, entrepreneurs will refine their business ideas, establish solid foundations, and prepare comprehensive business plans.",
       activities: [
-        'Concept refinement & market research',
-        'Business model development',
-        'Initial mentorship matching',
-        'Foundational business workshops'
-      ]
+        "Concept refinement & market research",
+        "Business model development",
+        "Initial mentorship matching",
+        "Foundational business workshops",
+      ],
     },
     {
       icon: <Rocket size={28} className="text-white" />,
-      title: 'Process',
-      weeks: 'Weeks 8-17',
-      color: 'bg-primary-800',
-      description: 'This critical phase focuses on implementation, building, and gaining traction. Entrepreneurs will develop prototypes and validate their business models.',
+      title: "Process",
+      weeks: "Weeks 8-17",
+      color: "bg-primary-800",
+      description:
+        "This critical phase focuses on implementation, building, and gaining traction. Entrepreneurs will develop prototypes and validate their business models.",
       activities: [
-        'Product/service development',
-        'Customer acquisition strategies',
-        'Financial management training',
-        'Pitch preparation & practice'
-      ]
+        "Product/service development",
+        "Customer acquisition strategies",
+        "Financial management training",
+        "Pitch preparation & practice",
+      ],
     },
     {
       icon: <Award size={28} className="text-white" />,
-      title: 'Execution',
-      weeks: 'Weeks 18-23',
-      color: 'bg-accent-500',
-      description: 'The final stage culminates in a grand finale event where entrepreneurs showcase their businesses to investors, mentors, and the broader community.',
+      title: "Execution",
+      weeks: "Weeks 18-23",
+      color: "bg-accent-500",
+      description:
+        "The final stage culminates in a grand finale event where entrepreneurs showcase their businesses to investors, mentors, and the broader community.",
       activities: [
-        'Scaling strategies implementation',
-        'Investor readiness preparation',
-        'Media & PR training',
-        'Grand Finale showcase event'
-      ]
-    }
+        "Scaling strategies implementation",
+        "Investor readiness preparation",
+        "Media & PR training",
+        "Grand Finale showcase event",
+      ],
+    },
   ];
 
   return (
@@ -66,10 +69,13 @@ const Timeline: React.FC = () => {
           variants={fadeIn}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">Program Timeline</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-800 mb-4">
+            Program Timeline
+          </h2>
           <div className="w-20 h-1 bg-accent-500 mx-auto mb-8"></div>
           <p className="text-gray-700 max-w-2xl mx-auto">
-            Our structured 23-week program is designed to take entrepreneurs from concept to execution through three key phases.
+            Our structured 23-week program is designed to take entrepreneurs
+            from concept to execution through three key phases.
           </p>
         </motion.div>
 
@@ -78,11 +84,11 @@ const Timeline: React.FC = () => {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute h-1 bg-gray-300 top-16 left-0 right-0 -mx-4"></div>
-            
+
             {/* Timeline Stages */}
             <div className="flex justify-between">
               {timelineStages.map((stage, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="relative w-1/3 px-4"
                   initial="hidden"
@@ -90,16 +96,24 @@ const Timeline: React.FC = () => {
                   variants={fadeIn}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.2 }}
                 >
-                  <div className={`${stage.color} w-12 h-12 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10`}>
+                  <div
+                    className={`${stage.color} w-12 h-12 rounded-full flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 z-10`}
+                  >
                     {stage.icon}
                   </div>
                   <div className="pt-24 text-center">
-                    <h3 className="text-xl font-semibold text-primary-800 mb-1">{stage.title}</h3>
-                    <p className="text-gray-600 mb-3 text-sm font-medium">{stage.weeks}</p>
+                    <h3 className="text-xl font-semibold text-primary-800 mb-1">
+                      {stage.title}
+                    </h3>
+                    <p className="text-gray-600 mb-3 text-sm font-medium">
+                      {stage.weeks}
+                    </p>
                     <p className="text-gray-700 mb-4">{stage.description}</p>
                     <ul className="text-left text-gray-700 pl-5 space-y-1">
                       {stage.activities.map((activity, idx) => (
-                        <li key={idx} className="list-disc text-sm">{activity}</li>
+                        <li key={idx} className="list-disc text-sm">
+                          {activity}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -113,7 +127,7 @@ const Timeline: React.FC = () => {
         <div className="md:hidden">
           <div className="relative pl-8 before:absolute before:left-4 before:h-full before:w-0.5 before:bg-gray-300">
             {timelineStages.map((stage, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="mb-10 relative"
                 initial="hidden"
@@ -121,16 +135,26 @@ const Timeline: React.FC = () => {
                 variants={fadeIn}
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.2 }}
               >
-                <div className={`${stage.color} w-8 h-8 rounded-full flex items-center justify-center absolute -left-4 z-10`}>
+                <div
+                  className={`${stage.color} w-8 h-8 rounded-full flex items-center justify-center absolute -left-4 z-10`}
+                >
                   {React.cloneElement(stage.icon, { size: 20 })}
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-custom">
-                  <h3 className="text-lg font-semibold text-primary-800 mb-1">{stage.title}</h3>
-                  <p className="text-gray-600 mb-3 text-xs font-medium">{stage.weeks}</p>
-                  <p className="text-gray-700 mb-4 text-sm">{stage.description}</p>
+                  <h3 className="text-lg font-semibold text-primary-800 mb-1">
+                    {stage.title}
+                  </h3>
+                  <p className="text-gray-600 mb-3 text-xs font-medium">
+                    {stage.weeks}
+                  </p>
+                  <p className="text-gray-700 mb-4 text-sm">
+                    {stage.description}
+                  </p>
                   <ul className="text-gray-700 pl-5 space-y-1">
                     {stage.activities.map((activity, idx) => (
-                      <li key={idx} className="list-disc text-xs">{activity}</li>
+                      <li key={idx} className="list-disc text-xs">
+                        {activity}
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -139,7 +163,7 @@ const Timeline: React.FC = () => {
           </div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="bg-primary-50 p-6 rounded-lg border border-primary-200 max-w-3xl mx-auto"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -158,7 +182,7 @@ const Timeline: React.FC = () => {
               Apply Now
             </a>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

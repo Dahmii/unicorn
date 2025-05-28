@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
               <li className="text-gray-300">
                 12 Innovation Drive, Lagos, Nigeria
               </li>
-              <li className="text-gray-300">contact@unicorn.ng</li>
+              <li className="text-gray-300">info@unicorn.ng</li>
               <li className="text-gray-300">+234 (0) 700 UNICORN</li>
             </ul>
           </div>

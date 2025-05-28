@@ -132,7 +132,7 @@ const GetInvolved: React.FC = () => {
                 <Mail className="w-5 h-5 text-primary-800 mr-3 mt-1" />
                 <div>
                   <h5 className="font-medium text-gray-800">Email</h5>
-                  <p className="text-gray-700">contact@unicorn.ng</p>
+                  <p className="text-gray-700">info@unicorn.ng</p>
                 </div>
               </div>
               <div className="flex items-start">
