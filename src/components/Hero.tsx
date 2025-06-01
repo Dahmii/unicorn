@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.7 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-              Empowering Africa's Next Generation of Entrepreneurs
+              Empowering Nigeria's Next Generation of Entrepreneurs
             </h1>
           </motion.div>
 

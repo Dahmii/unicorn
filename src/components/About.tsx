@@ -64,7 +64,7 @@ const About: React.FC = () => {
             </h3>
             <p className="text-gray-700 mb-6 leading-relaxed">
               Unicorn by Uspace is dedicated to transforming the entrepreneurial
-              landscape across Africa by identifying, supporting, and elevating
+              landscape across Nigeria by identifying, supporting, and elevating
               the next generation of business leaders.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
@@ -73,7 +73,7 @@ const About: React.FC = () => {
               African startups scale and succeed.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We envision an Africa where entrepreneurial talent is fully
+              We envision a Nigeria where entrepreneurial talent is fully
               recognized, developed, and celebrated – creating economic
               opportunities and solving critical challenges.
             </p>

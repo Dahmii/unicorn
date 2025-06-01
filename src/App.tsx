@@ -13,7 +13,7 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Timeline />
+        {/* <Timeline /> */}
         <Grants />
         <GetInvolved />
       </main>
