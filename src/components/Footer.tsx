@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Instagram, Twitter, Linkedin } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -20,33 +20,35 @@ const Footer: React.FC = () => {
               </a>
             </div>
             <p className="text-gray-300 mb-4">
-              Empowering Africa's Next Generation of Entrepreneurs
+              Empowering Nigeria's Next Generation of Entrepreneurs
             </p>
             <div className="flex space-x-3">
               <a
-                href="#"
+                href="https://www.instagram.com/unicorn.ng?igsh=MTlpcnE3MGN4MW9kcQ=="
+                target="_blank"
                 className="text-white hover:text-accent-500 transition-colors duration-300"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://x.com/unicorn__ng?s=11&t=kR7TeOfAySMs5o5rlTNnRQ"
+                target="_blank"
                 className="text-white hover:text-accent-500 transition-colors duration-300"
               >
                 <Twitter size={20} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-white hover:text-accent-500 transition-colors duration-300"
               >
                 <Linkedin size={20} />
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#"
                 className="text-white hover:text-accent-500 transition-colors duration-300"
               >
                 <Facebook size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -99,11 +101,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li className="text-gray-300">
+              <li className="text-gray-300">info@unicorn.ng</li>
+              {/* <li className="text-gray-300">
                 12 Innovation Drive, Lagos, Nigeria
               </li>
-              <li className="text-gray-300">info@unicorn.ng</li>
-              <li className="text-gray-300">+234 (0) 700 UNICORN</li>
+              
+              <li className="text-gray-300">+234 (0) 700 UNICORN</li> */}
             </ul>
           </div>
 
@@ -115,7 +118,7 @@ const Footer: React.FC = () => {
             </ul> */}
             <div className="mt-4">
               <a
-                href="#"
+                href="#get-involved"
                 className="inline-block border border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-white px-4 py-2 rounded-md font-medium transition-colors duration-300 text-sm"
               >
                 Support Our Mission
@@ -127,7 +130,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
           <p>© {currentYear} Unicorn by Uspace. All rights reserved.</p>
           <p className="mt-1 flex items-center justify-center">
-            powered by Umobiletechnologies
+            powered by Umobile Technologies
           </p>
         </div>
       </div>

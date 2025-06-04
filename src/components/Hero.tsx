@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             <p className="text-lg md:text-xl lg:text-2xl opacity-90 mb-8 max-w-3xl mx-auto">
               Providing grants, mentorship, and national exposure to transform
               ideas into successful businesses.
-              <br /> powered by uspace.
+              <br /> powered by Uspace.
             </p>
           </motion.div>
 
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
               href="#about"
               className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white px-8 py-3 rounded-md font-semibold text-lg transition-all duration-300 backdrop-filter backdrop-blur-sm"
             >
-              Learn More
+              Learn more
             </a>
           </motion.div>
         </div>

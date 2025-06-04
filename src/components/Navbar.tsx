@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -6,16 +7,20 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Section links for the single page sections
+  const sectionLinks = [
+    { name: "About", href: "#about" },
+    // { name: "Program", href: "#program" },
+    { name: "Grants", href: "#grants" },
+    { name: "Get Involved", href: "#get-involved" },
+  ];
 
   return (
     <nav
@@ -25,43 +30,42 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img
               src="/logo.svg"
-              alt="Unicorn Foundation Logo"
+              alt="Unicorn Logo"
               style={{ width: "180px", height: "60px" }}
-              className=" object-contain"
+              className="object-contain"
             />
-            {/* <span
-              className={`font-bold text-xl ${
-                isScrolled ? "text-primary-800" : "text-white"
-              } transition-colors duration-300`}
-            >
-              Unicorn Foundation
-            </span> */}
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {["About", "Program", "Grants", "Get Involved"].map((item) => (
+            {sectionLinks.map(({ name, href }) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                key={name}
+                href={href}
                 className={`${
                   isScrolled
                     ? "text-gray-700 hover:text-accent-500"
                     : "text-gray hover:text-accent-500"
                 } font-medium transition-colors duration-300`}
               >
-                {item}
+                {name}
               </a>
             ))}
-            {/* <a
-              href="#apply"
-              className="bg-accent-500 hover:bg-accent-600 text-white px-5 py-2 rounded-md font-medium transition-colors duration-300"
+
+            {/* Donate as a separate page link */}
+            <Link
+              to="/donate"
+              className={`${
+                isScrolled
+                  ? "text-gray-700 hover:text-accent-500"
+                  : "text-gray hover:text-accent-500"
+              } font-medium transition-colors duration-300`}
             >
-              Apply Now
-            </a> */}
+              Donate
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -101,23 +105,23 @@ const Navbar: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-3 bg-white rounded-lg p-4 shadow-lg">
-              {["About", "Program", "Grants", "Get Involved"].map((item) => (
+              {sectionLinks.map(({ name, href }) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(" ", "-")}`}
+                  key={name}
+                  href={href}
                   className="text-gray-700 hover:text-primary-800 font-medium transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item}
+                  {name}
                 </a>
               ))}
-              {/* <a
-                href="#apply"
-                className="bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-md font-medium text-center transition-colors duration-300"
+              <Link
+                to="/donate"
+                className="text-gray-700 hover:text-primary-800 font-medium transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Apply Now
-              </a> */}
+                Donate
+              </Link>
             </div>
           </div>
         )}

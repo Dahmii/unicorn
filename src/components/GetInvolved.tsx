@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { HandHeart, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const GetInvolved: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +28,13 @@ const GetInvolved: React.FC = () => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     setSubmitted(true);
-    // In a real application, you would send this data to a server
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      involvement: "Partner",
+    });
   };
 
   const [ref, inView] = useInView({
@@ -56,7 +63,7 @@ const GetInvolved: React.FC = () => {
           <div className="w-20 h-1 bg-accent-500 mx-auto mb-8"></div>
           <p className="text-gray-700 max-w-2xl mx-auto">
             Join us in our mission to transform the entrepreneurial landscape in
-            Africa. There are many ways to contribute to this vision.
+            Nigeria. There are many ways to contribute to this vision.
           </p>
         </motion.div>
 
@@ -72,6 +79,23 @@ const GetInvolved: React.FC = () => {
               <h3 className="text-2xl font-semibold text-gray-800">
                 Ways to Contribute
               </h3>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-custom p-6 mb-8">
+              <h4 className="text-xl font-semibold text-primary-800 mb-4">
+                Donate
+              </h4>
+              <p className="text-gray-700 mb-4">
+                Support our mission financially. Your donations directly fund
+                grants, educational resources, and program operations to help
+                more entrepreneurs across Nigeria.
+              </p>
+              <Link
+                to="/donate"
+                className="text-primary-800 font-medium hover:text-primary-600 transition-colors duration-300"
+              >
+                Make a contribution →
+              </Link>
             </div>
 
             <div className="bg-white rounded-lg shadow-custom p-6 mb-8">
@@ -110,23 +134,6 @@ const GetInvolved: React.FC = () => {
               </a>
             </div>
 
-            <div className="bg-white rounded-lg shadow-custom p-6">
-              <h4 className="text-xl font-semibold text-primary-800 mb-4">
-                Donate
-              </h4>
-              <p className="text-gray-700 mb-4">
-                Support our mission financially. Your donations directly fund
-                grants, educational resources, and program operations to help
-                more entrepreneurs across Africa.
-              </p>
-              <a
-                href="#donate"
-                className="text-primary-800 font-medium hover:text-primary-600 transition-colors duration-300"
-              >
-                Make a contribution →
-              </a>
-            </div>
-
             <div className="mt-10 space-y-4">
               <div className="flex items-start">
                 <Mail className="w-5 h-5 text-primary-800 mr-3 mt-1" />
@@ -135,7 +142,7 @@ const GetInvolved: React.FC = () => {
                   <p className="text-gray-700">info@unicorn.ng</p>
                 </div>
               </div>
-              <div className="flex items-start">
+              {/* <div className="flex items-start">
                 <Phone className="w-5 h-5 text-primary-800 mr-3 mt-1" />
                 <div>
                   <h5 className="font-medium text-gray-800">Phone</h5>
@@ -150,7 +157,7 @@ const GetInvolved: React.FC = () => {
                     12 Innovation Drive, Lagos, Nigeria
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
